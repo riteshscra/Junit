@@ -1,20 +1,19 @@
-pipline{
-      agent any
-      
-      stages{
-        
+pipeline{
+    agent any
+   
+    stages{
+   
         stage('Compile Stage'){
-          steps{
-          
-                     sh'''
-        cd mynewwebapp
-        cd MywebApp
-        mvn clean install
-  ...
-              }
-           }
-        }
-    
+            steps{
+               
+                    sh '''
+          cd demo2-master
+      cd demo1
+          mvn clean install
+    '''
+            }
+        }   
     }
+}
          
     
